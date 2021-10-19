@@ -19,4 +19,8 @@ Route::get('/', 'ItemController@index')->name('item.index');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('item/create', 'ItemController@create')->name('item.create');
     Route::post('item/create', 'ItemController@store')->name('item.store');
+    Route::get('item/{id}/edit', 'ItemController@edit')->name('item.edit');
+    Route::post('item/{id}/update', 'ItemController@update')->name('item.update');
+    Route::get('item/{id}/delete', 'ItemController@delete')->name('item.delete');
 });
+

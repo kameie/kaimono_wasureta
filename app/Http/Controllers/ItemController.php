@@ -33,4 +33,44 @@ class ItemController extends Controller
 
         return redirect()->route('item.index');
     }
+
+    public function edit($id)
+    {
+        $item = Item::findOrFail($id);
+        if ($item->user_id !== Auth::id()) {
+            return redirect('/');
+        }
+
+        return view('items.edit', ['item' => $item]);
+    }
+
+    public function update(ItemRequest $request, $id)
+    {
+        $item = Item::findorFail($id);
+
+        if ($item->user_id !== Auth::id()) {
+            return redirect('/');
+        }
+
+        $item->name = $request->name;
+        $item->days = $request->days;
+
+        $item->save();
+
+        return redirect('/');
+    }
+
+    public function delete($id)
+    {
+        $item = Item::findOrFail($id);
+
+        if ($item->user_id !== Auth::id()) {
+            return redirect('/');
+        }
+
+        $item->delete();
+
+        return redirect('/');
+    }
+
 }
