@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="col-md-6 mx-auto">
-    
+    買い物メモに商品名と使い切るまでのおおよその日数を入力してメモを作りましょう！
+    @if( Auth::check() )
     <a class="btn btn-primary btn-md" href="{{ route('item.create') }}">
         <i class="far fa-create"></i>＋買い物メモを作る
     </a>  
@@ -28,6 +29,7 @@
             </div>   
         </div>
     @endforeach
-    
+@endif
+
 </div>
 @endsection
