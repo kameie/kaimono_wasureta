@@ -25,7 +25,7 @@ class ItemRequest extends FormRequest
     {
         return [
             'name' => 'required|max:30',
-            'days' => 'required|integer|max:3',
+            'days' => 'required|integer|max:999',
         ];
     }
 

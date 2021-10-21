@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-
+use App\Item;
 class DecrementDays extends Command
 {
     /**
@@ -11,14 +11,14 @@ class DecrementDays extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:decrement';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'daysカラムをマイナス１する';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,14 @@ class DecrementDays extends Command
      */
     public function handle()
     {
-        //
+        
+        $items = Item::all();
+        foreach($items as $item) {
+            echo $item->days;
+
+            if ($item->days > 0) {
+                $item->decrement('days');
+            }
+        }
     }
 }
