@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 use App\Item;
 class DecrementDays extends Command
 {
@@ -37,6 +38,7 @@ class DecrementDays extends Command
      */
     public function handle()
     {
+        $message = '[' . date('Y-m-d h:i:s') . ']Command:decrement';
         
         $items = Item::all();
         foreach($items as $item) {
@@ -46,5 +48,10 @@ class DecrementDays extends Command
                 $item->decrement('days');
             }
         }
+
+        $this->info( $message );
+
+        Log::setDefaultDriver('batch');
+        Log::info( $message );
     }
 }
