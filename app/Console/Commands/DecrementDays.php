@@ -37,21 +37,16 @@ class DecrementDays extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $message = '[' . date('Y-m-d h:i:s') . ']Command:decrement';
-        
+    {   
         $items = Item::all();
         foreach($items as $item) {
             echo $item->days;
 
             if ($item->days > 0) {
                 $item->decrement('days');
+
+                logger()->info('command:decrement');
             }
         }
-
-        $this->info( $message );
-
-        Log::setDefaultDriver('batch');
-        Log::info( $message );
     }
 }
