@@ -13,8 +13,6 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/', 'ItemController@index')->name('item.index');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('item/create', 'ItemController@create')->name('item.create');
