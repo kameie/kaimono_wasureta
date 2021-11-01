@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="jumbotron jumbotron-fluid hero">
+
 <div class="col-md-6 mx-auto">
     買い物メモに商品名と使い切るまでのおおよその日数を入力してメモを作りましょう！
     
@@ -33,5 +35,7 @@
     @endforeach
 
 
+
+</div>
 </div>
 @endsection
