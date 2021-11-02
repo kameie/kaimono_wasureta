@@ -7,13 +7,24 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-.hero{
- 
-  background-image: url(../images/juntexture14711471.jpg);
-    background-size: cover;
-    background-position: center;
+.jumbotron {
 
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("../img/juntexture14711471.jpg")
+    center / cover;
+  
 }
+
+.btn-hantoumei {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-color: rgba(0, 0, 0, 0.7); ;
+}
+
+
+
 
 
 :root {
@@ -4525,6 +4536,7 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  background-color: rgba(0,0,0,0.6); 
 }
 
 .navbar .container,
@@ -4879,7 +4891,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-light .navbar-brand:hover,
@@ -4888,7 +4900,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-light .navbar-nav .nav-link:hover,

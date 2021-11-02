@@ -1,14 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="jumbotron jumbotron-fluid hero">
+
+
+
+
+
 
 <div class="col-md-6 mx-auto">
-    買い物メモに商品名と使い切るまでのおおよその日数を入力してメモを作りましょう！
+    <div class="badge bg-rgba(0,0,0,0.6); text-wrap text-white" style="width:50rem;">買い物メモに物の名前と使い切るまでのおおよその日数を入力してメモを作りましょう！</div>
     
-    <a class="btn btn-primary btn-md" href="{{ route('item.create') }}">
+    <a class="btn btn-primary:focus btn-md" href="{{ route('item.create') }}">
         <i class="far fa-create"></i>＋買い物メモを作る
-    </a>  
+</a>  
     @foreach ($items as $item)
     @if ($item->user_id === Auth::id())
         <div class="card-wrap">
@@ -36,6 +40,6 @@
 
 
 
-</div>
+
 </div>
 @endsection
