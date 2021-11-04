@@ -1,53 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">        
+            <div class="row">
+                <a class="btn btn-md" href="{{ route('item.create') }}"><i class="far fa-create"></i>買い物メモを作る</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
-<div class="col-md-6 mx-auto">
-
-
-
-    
-    
-    <a class="btn btn-md" href="{{ route('item.create') }}">
-        <i class="far fa-create"></i>買い物メモを作る
-</a>  
-
-<div class="text-wrap text-white" style="width:50rem;">買い物メモに物の名前と使い切るまでのおおよその日数を入力してメモを作りましょう！</div>
-
-
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">        
+            <div class="row">   
     @foreach ($items as $item)
-    @if ($item->user_id === Auth::id())
-    <div class="card-columns">
-        <div class="card mt-3">
-                <div class="card-header">
-                    {{ $item->days }}日
-                </div>
-                <div class="card-body">
-                    {{ $item->name }}
-                    </div>
-                        
-                        <div>
-                        <a class="btn btn-success btn-sm" href="{{ route('item.edit', ['id' => $item->id]) }}">
+    @if ($item->user_id === Auth::id()) 
+            <div class="col-md-4">
+    <div class="card mb-3">
+            <div class="card-header text-center">
+                    {{ $item->days }}日 
+                     <div class="text-right">
+                        <a class="btnorigin btn-outline-success btn-sm" href="{{ route('item.edit', ['id' => $item->id]) }}">
                             <i class="far fa-edit"></i>編集
                         </a>
-                        <a class="btn btn-danger btn-sm" rel="nofollow" href="{{ route('item.delete', ['id' => $item->id]) }}">
+                        <a class="btnorigin btn-outline-danger btn-sm" rel="nofollow" href="{{ route('item.delete', ['id' => $item->id]) }}">
                             <i class="far fa-trash-alt"></i>削除
                         </a>
-                         </div>
-                    
-                
-             </div>
-        </div>
+                </div>
+                </div>
+                <div class="card-body text-center">
+                    {{ $item->name }}
+                    </div>
+                </div>
+                </div>
     @endif
     @endforeach
-
-
-
-
+</div>
+</div>
+</div>
 </div>
 @endsection
