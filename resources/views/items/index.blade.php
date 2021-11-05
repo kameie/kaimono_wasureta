@@ -5,7 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-10">        
             <div class="row">
+                <div class="col text-center mb-4">
                 <a class="btn btn-md" href="{{ route('item.create') }}"><i class="far fa-create"></i>買い物メモを作る</a>
+                 
+                @guest       
+                <div class="col text-center mt-4">
+       <img src="img/スクリーンショット 2021-11-05 22.37.30.png"></div>
+                @endguest
             </div>
         </div>
     </div>
