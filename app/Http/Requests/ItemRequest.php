@@ -36,7 +36,7 @@ class ItemRequest extends FormRequest
             'name.max' => '名前は30文字以内で入力してください。',
             'days.required' => '日数は必須です。',
             'days.integer' => '日数は整数で入力してください。',
-            'days.max' => '日数は3文字以内で入力してください。',
+            'days.max' => '日数は999日以内で入力してください。',
         ];
     }
 }
