@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="text-center my-2">{{ __('ユーザー登録') }}</h3>
+                    <h4 class="text-center my-2">{{ __('ユーザー登録') }}</h4>
                 </div>
     
                 <div class="card-body">
@@ -22,6 +22,7 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <small>30文字以内で入力して下さい。</small>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -75,7 +76,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-md">
                                     {{ __('新規登録する') }}
                                 </button>
                             </div>
