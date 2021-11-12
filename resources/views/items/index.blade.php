@@ -21,30 +21,30 @@
     <div class="row justify-content-center">
         <div class="col-md-10">        
             <div class="row">   
-    @foreach ($items as $item)
-    @if ($item->user_id === Auth::id()) 
-            <div class="col-md-4">
-    <div class="card mb-3">
-            <div class="card-header text-center">
-                    {{ $item->days }}日 
-                     <div class="text-right">
-                        <a class="btnorigin btn-outline-success btn-sm" href="{{ route('item.edit', ['id' => $item->id]) }}">
-                            <i class="far fa-edit"></i>編集
-                        </a>
-                        <a class="btnorigin btn-outline-danger btn-sm" rel="nofollow" href="{{ route('item.delete', ['id' => $item->id]) }}">
-                            <i class="far fa-trash-alt"></i>削除
-                        </a>
-                </div>
-                </div>
-                <div class="card-body text-center">
-                    {{ $item->name }}
-                    </div>
-                </div>
-                </div>
-    @endif
-    @endforeach
-</div>
-</div>
-</div>
+                @foreach ($items as $item)
+                    @if ($item->user_id === Auth::id()) 
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header text-center">
+                                    {{ $item->days }}日 
+                                    <div class="text-right">
+                                        <a class="btnorigin btn-outline-success btn-sm" href="{{ route('item.edit', ['id' => $item->id]) }}">
+                                            <i class="far fa-edit"></i>編集
+                                        </a>
+                                        <a class="btnorigin btn-outline-danger btn-sm" rel="nofollow" href="{{ route('item.delete', ['id' => $item->id]) }}">
+                                            <i class="far fa-trash-alt"></i>削除
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                {{ $item->name }}
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
