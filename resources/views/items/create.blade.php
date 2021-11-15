@@ -46,6 +46,9 @@
                 <div class="col text-center">
                 <button type="submit" class="btn btn-md">投稿する</button>
                 </div>
+                <div class="col text-center mt-3">
+                <a class="btnorigin btn-outline-secondary" href="{{ route('item.index') }}">戻る</a>
+                </div>
             </form>
             </div>
             </div>
