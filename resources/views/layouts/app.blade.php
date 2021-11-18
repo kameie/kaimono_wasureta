@@ -56,6 +56,10 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録する') }}</a>
                                 </li>
                             @endif
+                                <button class="btnorigin btn-outline-success">
+                                    <a href="{{ route('login.guest') }}" class="text-white">ゲストログイン
+                                    </a>
+                                </button>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
