@@ -44,10 +44,11 @@
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-md">
                                     {{ __('ログインする') }}
-                                </button>
-
-                                
+                                </button>                                
                             </div>
+                            <div class="col text-center mt-2">
+                <a class="btnorigin btn-outline-secondary" href="{{ route('item.index') }}">戻る</a>
+                </div>
                         </div>
                     </form>
                 </div>

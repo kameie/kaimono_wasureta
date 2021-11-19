@@ -75,11 +75,14 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-md">
                                     {{ __('新規登録する') }}
                                 </button>
                             </div>
+                            <div class="col text-center mt-3">
+                <a class="btnorigin btn-outline-secondary" href="{{ route('item.index') }}">戻る</a>
+                </div>
                         </div>
                     </form>
                 </div>
