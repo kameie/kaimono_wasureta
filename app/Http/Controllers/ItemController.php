@@ -23,8 +23,8 @@ class ItemController extends Controller
 
     public function store(ItemRequest $request)
     {
-        $item = new Item;
-        
+        $item = new Item();
+
         $item->name = $request->name;
         $item->days = $request->days;
         $item->user_id = Auth::id();
@@ -72,5 +72,4 @@ class ItemController extends Controller
 
         return redirect('/');
     }
-
 }

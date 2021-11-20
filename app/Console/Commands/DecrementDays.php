@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 use App\Item;
+
 class DecrementDays extends Command
 {
     /**
@@ -37,9 +38,9 @@ class DecrementDays extends Command
      * @return mixed
      */
     public function handle()
-    {   
+    {
         $items = Item::all();
-        foreach($items as $item) {
+        foreach ($items as $item) {
             echo $item->days;
 
             if ($item->days > 0) {
