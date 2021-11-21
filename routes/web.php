@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::get('guest','Auth\LoginController@guestLogin')->name('login.guest');
+Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 Route::get('/', 'ItemController@index')->name('item.index');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('item/create', 'ItemController@create')->name('item.create');
@@ -22,4 +22,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('item/{id}/update', 'ItemController@update')->name('item.update');
     Route::get('item/{id}/delete', 'ItemController@delete')->name('item.delete');
 });
-
