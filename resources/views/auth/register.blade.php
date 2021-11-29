@@ -4,7 +4,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="text-center my-2">{{ __("ユーザー登録") }}</h4>
+                    <h4 class="text-center my-2">{{ __("新規登録") }}</h4>
                 </div>
 
                 <div class="card-body">
